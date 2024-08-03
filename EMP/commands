@@ -1,3 +1,71 @@
 //where
 select *from emp 
-    where deptno=10
+    where deptno=10;
+
+select *from emp 
+    where deptno != 30;
+
+select count(*) 
+from emp;
+
+select *from emp 
+order by salary desc;
+
+select *from emp 
+order by sal desc;
+
+//desc use or asce
+select *from emp 
+order by deptno asc,sal desc;
+
+//between use
+select *from emp 
+where hiredate between '31-dec-80' and '31-dec-81';
+
+// and operator
+select *from emp 
+where (mgr=7698 or mgr=7566) and sal>1500;
+
+//diplay name 
+select ename
+from emp
+where sal<(select sal
+    from emp
+    where ename='FORD');
+
+//distinct
+select distinct job
+from emp;
+
+//number by id
+select *from emp
+order by empno;
+
+//length
+select ename
+from emp
+where ename like '_____';
+
+//start and end
+select ename
+from emp
+where ename like 'J%_S';
+
+//not equal
+select ename
+from emp
+where deptno!=10 and deptno!=20 and deptno!=40;
+
+//string
+select ename
+from emp
+where job!='PRESIDENT'and job!='MANAGER';
+
+// max
+select max(sal)
+from emp;
+
+//particular data
+select avg(sal)
+from emp
+where job='SALESMAN';
