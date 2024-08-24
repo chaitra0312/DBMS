@@ -69,3 +69,7 @@ from emp;
 select avg(sal)
 from emp
 where job='SALESMAN';
+
+//natural join
+select ename,empno,dname,loc
+from emp natural join dept;
