@@ -49,7 +49,7 @@ where ename like '_____';
 //start and end
 select ename
 from emp
-where ename like 'J%_S';
+where ename like 'J%S';
 
 //not equal
 select ename
